@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -25,24 +25,31 @@
                                     <action selector="showBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="akG-Uo-vEh"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Td3-k6-oB5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Td3-k6-oB5">
                                 <rect key="frame" x="150" y="208" width="300" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="nCF-uG-Vch"/>
+                                    <constraint firstAttribute="width" constant="300" id="PgI-V2-afk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="U8j-Rk-Hdb">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Td3-k6-oB5" firstAttribute="centerX" secondItem="IXO-sz-Euq" secondAttribute="centerX" id="8pJ-9A-vcB"/>
-                            <constraint firstItem="Td3-k6-oB5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mhy-53-UP6"/>
-                            <constraint firstItem="Td3-k6-oB5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="QEP-65-LlS"/>
-                            <constraint firstItem="IXO-sz-Euq" firstAttribute="top" secondItem="Td3-k6-oB5" secondAttribute="bottom" constant="97" id="vsk-PL-XUl"/>
+                            <constraint firstItem="U8j-Rk-Hdb" firstAttribute="top" secondItem="Td3-k6-oB5" secondAttribute="bottom" constant="43" id="Efb-Vf-Esi"/>
+                            <constraint firstItem="U8j-Rk-Hdb" firstAttribute="centerX" secondItem="IXO-sz-Euq" secondAttribute="centerX" id="Hrj-1c-uTE"/>
+                            <constraint firstItem="Td3-k6-oB5" firstAttribute="centerX" secondItem="U8j-Rk-Hdb" secondAttribute="centerX" id="aTt-uh-k2B"/>
+                            <constraint firstItem="IXO-sz-Euq" firstAttribute="top" secondItem="U8j-Rk-Hdb" secondAttribute="bottom" constant="17" id="ehd-9H-pyV"/>
+                            <constraint firstItem="U8j-Rk-Hdb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i8P-qX-Ue8"/>
+                            <constraint firstItem="Td3-k6-oB5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uQq-6S-Vuv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicate" destination="U8j-Rk-Hdb" id="m2M-eF-Bow"/>
                         <outlet property="showBtn" destination="IXO-sz-Euq" id="NuD-yN-SAR"/>
                         <outlet property="usernameTextField" destination="Td3-k6-oB5" id="DWw-dc-67z"/>
                     </connections>
@@ -69,7 +76,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="153" id="eTf-bk-e1y"/>
                                 </constraints>
-                                <mutableString key="text">Poring Poporing test test ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Poring Poporing test test ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.96470594409999999" green="0.96470594409999999" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

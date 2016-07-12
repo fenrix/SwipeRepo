@@ -19,10 +19,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var showBtn: UIButton!
-
+    @IBOutlet weak var activityIndicate: UIActivityIndicatorView!
     
     @IBAction func showBtn(sender: UIButton) {
         
+        self.startActivityIndicator()
         let username: String?
         let text = usernameTextField.text
         
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
         Alamofire.request(.GET, url, parameters: nil)// parameter ?
             .responseJSON { response in
 
-                print(response.response?.statusCode)
+//                print(response.response?.statusCode)
                 
                 if(response.response?.statusCode == 200){
                     let jSonArray =  (response.result.value as! NSArray) as Array
@@ -61,7 +62,7 @@ class ViewController: UIViewController {
                         self.userInst.ns.addObject(repData)
                     }
                     //handle error if no response or out of response code range??
-                    
+                    self.stopActivityIndicator()
                     let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("RepoListId") as UIViewController
                     self.presentViewController(viewController, animated: true, completion: nil)
                     
@@ -72,6 +73,9 @@ class ViewController: UIViewController {
                     }else{
                         self.alertPopUp("Error", msg: "Something wrong", buttonName: "Ok")
                     }
+                    
+                    self.stopActivityIndicator()
+
                 }
                 
         }
@@ -86,6 +90,16 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: buttonName, style: UIAlertActionStyle.Default, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
         
+    }
+    
+    func startActivityIndicator() {
+        self.activityIndicate.startAnimating()
+        self.activityIndicate.hidden = false;
+    }
+    
+    func stopActivityIndicator() {
+        self.activityIndicate.stopAnimating()
+        self.activityIndicate.hidden = true;
     }
 
     
