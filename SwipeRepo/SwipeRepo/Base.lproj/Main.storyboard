@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwipeRepo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXO-sz-Euq">
+                                <rect key="frame" x="277" y="335" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="showBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="akG-Uo-vEh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Td3-k6-oB5">
+                                <rect key="frame" x="150" y="208" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="nCF-uG-Vch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Td3-k6-oB5" firstAttribute="centerX" secondItem="IXO-sz-Euq" secondAttribute="centerX" id="8pJ-9A-vcB"/>
+                            <constraint firstItem="Td3-k6-oB5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mhy-53-UP6"/>
+                            <constraint firstItem="Td3-k6-oB5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="188" id="QEP-65-LlS"/>
+                            <constraint firstItem="IXO-sz-Euq" firstAttribute="top" secondItem="Td3-k6-oB5" secondAttribute="bottom" constant="97" id="vsk-PL-XUl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="showBtn" destination="IXO-sz-Euq" id="NuD-yN-SAR"/>
+                        <outlet property="usernameTextField" destination="Td3-k6-oB5" id="DWw-dc-67z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="267"/>
+        </scene>
+        <!--Repo List-->
+        <scene sceneID="5OH-k5-lAH">
+            <objects>
+                <viewController storyboardIdentifier="RepoListId" id="6PD-pf-nGu" customClass="RepoList" customModule="SwipeRepo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fZC-V4-80a"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hid-Sd-csP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qPO-Wh-IyA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Aur-gz-2QD">
+                                <rect key="frame" x="24" y="260" width="552" height="153"/>
+                                <color key="backgroundColor" red="0.2078431547" green="0.37254902719999999" blue="0.72156864399999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="eTf-bk-e1y"/>
+                                </constraints>
+                                <mutableString key="text">Poring Poporing test test ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" red="0.96470594409999999" green="0.96470594409999999" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ola-Mf-pAa">
+                                <rect key="frame" x="0.0" y="41" width="600" height="129"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aur-gz-2QD" firstAttribute="leading" secondItem="qPO-Wh-IyA" secondAttribute="leadingMargin" constant="4" id="722-zq-IpB"/>
+                            <constraint firstItem="Hid-Sd-csP" firstAttribute="top" secondItem="Aur-gz-2QD" secondAttribute="bottom" constant="187" id="A7K-6Q-e0w"/>
+                            <constraint firstItem="Ola-Mf-pAa" firstAttribute="centerX" secondItem="Aur-gz-2QD" secondAttribute="centerX" id="E6e-IX-we0"/>
+                            <constraint firstAttribute="trailing" secondItem="Ola-Mf-pAa" secondAttribute="trailing" id="WoB-ud-5HO"/>
+                            <constraint firstItem="Ola-Mf-pAa" firstAttribute="top" secondItem="fZC-V4-80a" secondAttribute="bottom" constant="21" id="gRV-zu-Lyu"/>
+                            <constraint firstItem="Ola-Mf-pAa" firstAttribute="leading" secondItem="qPO-Wh-IyA" secondAttribute="leading" id="icY-lM-ht1"/>
+                            <constraint firstItem="Aur-gz-2QD" firstAttribute="top" secondItem="Ola-Mf-pAa" secondAttribute="bottom" constant="90" id="rw1-Kl-s7w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTxtView" destination="Aur-gz-2QD" id="ZZ7-uG-5Pe"/>
+                        <outlet property="scrollView" destination="Ola-Mf-pAa" id="zq9-ft-g6Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11z-My-Gfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="453" y="250"/>
+        </scene>
+    </scenes>
+</document>
